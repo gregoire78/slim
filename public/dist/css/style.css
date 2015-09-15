@@ -1,0 +1,196 @@
+/* Sticky footer styles
+------------------------ */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+    text-align: center
+}
+.container {
+    /*width: auto;
+    max-width: 680px;*/
+    padding: 0 15px;
+}
+/*.container-fluid {
+    max-width: 680px;
+}*/
+.container .text-muted {
+    margin: 20px 0;
+}
+
+/* custom popover
+---------------------------*/
+.popover {
+    max-width: 400px;
+    cursor: default;
+    z-index: 10;
+}
+
+.popover:hover {
+    opacity: 0.4;
+}
+
+/* ERROR */
+.popError {
+    background-color: #ff4136;
+    border: none !important;;
+}
+
+.popError.bottom>.arrow {
+    border-bottom-color: #ff4136;
+}
+
+.popError.bottom>.arrow:after {
+    border-bottom-color: #ff4136;
+}
+
+.popError > .popover-content {
+    color: #f6f6f6;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+/* FIN ERROR */
+
+/* WARNING */
+.popWarning {
+    background-color: #F8F0C4;
+    border: 1px solid #ff851b;
+}
+
+.popWarning.bottom>.arrow {
+    border-bottom-color: #ff851b;
+}
+
+.popWarning.bottom>.arrow:after {
+    border-bottom-color: #F8F0C4;
+}
+
+.popWarning > .popover-content {
+    color: #ff851b;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+/* FIN WARNING */
+
+/* LOADER BOOT
+------------------------*/
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+/* Carousel
+----------------------*/
+.carousel {
+    height: 50vh;
+    padding-top: 50px;
+}
+
+.carousel-caption > h2{
+    font-size: 4vmax ;
+    color: white;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.carousel-control:hover {
+    color: #000000;
+}
+
+.carousel-control:focus, .carousel-control:hover {
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    outline: 0;
+    opacity: .5;
+}
+
+/* END CAROUSSEL */
+
+/**modal**/
+.modal-body {
+    padding: 0;
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #3A0000;
+}
+
+/** GOOGLE MAP **/
+#map, #pano{
+    height: 50%;
+}
+.gMap{
+    height: 500px;
+}
+@media (min-width: 680px) {
+    #map, #pano {
+        height: 500px;
+        float: left;
+    }
+
+    #map{
+        width: 55%;
+    }
+    #pano{
+        width: 45%;
+    }
+}
+
+.iniFloat{
+    clear: both;
+}
+/* BREADCRUMP
+---------------*/
+.breadcrumb {
+    border: none;
+    background-color: transparent;
+}

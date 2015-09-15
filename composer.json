@@ -1,0 +1,22 @@
+{
+  "name": "greetin/package_name",
+  "description": "description_text",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "gregoire",
+      "email": "email@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/",
+      "Core\\" : "core/"
+    }
+  },
+  "require": {
+    "slim/slim": "2.6.2",
+    "intervention/image": "~2.3@dev"
+  }
+}
