@@ -60,6 +60,11 @@ class Table
         return $this->query("INSERT INTO {$this->table} SET $sql_part", $attributes, true);
     }
 
+    public function delete($id)
+    {
+        return $this->query("DELETE FROM {$this->table} WHERE id = ?", [$id], true);
+    }
+
     public function extract($key, $value)
     {
         $records = $this->all();

@@ -55,5 +55,5 @@ use App\Vendor\String;
 
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=&v=3.21&callback=initMap&libraries=drawing&signed_in=true">//&signed_in=true
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQvNIyP2d-8QUabyIJEIHtf41iaNue_7c&v=3.21&callback=initMap&libraries=drawing&signed_in=true">//&signed_in=true
 </script>

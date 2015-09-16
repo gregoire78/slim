@@ -25,6 +25,8 @@ $app->group('/users', function () use ($app) {
 
     $app->get('/edit/:firstname-:lastname-:id', 'App\Controller\UserformController:editGet')->conditions(array('id' => '[0-9]+'))->name('edit');
     $app->post('/edit/:firstname-:lastname-:id', 'App\Controller\UserformController:editPost')->conditions(array('id' => '[0-9]+'));
+
+    $app->get('/delete/:firstname-:lastname-:id', 'App\Controller\UsersController:delete')->conditions(array('id' => '[0-9]+'))->name('delete');
 });
 
 $app->run();

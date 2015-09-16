@@ -23,15 +23,20 @@ use App\Vendor\String;
         <th></th>
     </tr>
     <?php foreach ($users as $i => $user): ?>
-    <tr onclick="window.location.href = '<?= $this->app->urlFor('LoUser', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)) ?>'" style="cursor: pointer">
-        <td><?= $user->id; ?></td>
-        <td><?= $user->lastname; ?></td>
-        <td><?= $user->firstname; ?></td>
-        <td><?= App\Vendor\String::my_mb_ucfirst($user->group) ?></td>
-        <td><?= $user->dateRegister; ?></td>
+        <?php  $urluser = $this->app->urlFor('LoUser', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)); /** Init on click */
+               $onclick = " onclick=\"window.location.href = '$urluser'\" style=\"cursor: pointer\"" ?>
+    <tr>
+        <td <?= $onclick ?>><?= $user->id; ?></td>
+        <td <?= $onclick ?>><?= $user->lastname; ?></td>
+        <td <?= $onclick ?>><?= $user->firstname; ?></td>
+        <td <?= $onclick ?>><?= App\Vendor\String::my_mb_ucfirst($user->group) ?></td>
+        <td <?= $onclick ?>><?= $user->dateRegister; ?></td>
         <td><!--<a href="<?/*=$this->app->urlFor('Lo').$url; */?>" type="button" class="btn btn-default btn-xs">Voir la fiche</a>-->
+            <noscript>
+                <a href="<?= $urluser ?>" class="btn btn-default btn-xs" title="voir fiche de <?= $user->name ?>">Fiche</a>
+            </noscript>
             <a href="<?= $this->app->urlFor('edit', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)); ?>" type="button" class="btn btn-info btn-xs" title="Editer <?= $user->name ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-            <a href="" class="btn btn-danger btn-xs" type="button" title="Supprimer <?= $user->name ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            <a href="<?= $this->app->urlFor('delete', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)); ?>" class="btn btn-danger btn-xs" type="button" title="Supprimer <?= $user->name ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
         </td>
     </tr>
     <?php endforeach; ?>

@@ -44,8 +44,8 @@ class UserformController extends Controller
         $validator = $this->validatorUser();
         if ($validator->isValid()) {
             $this->user->create([
-                'firstname' => trim($_POST['firstname']),
-                'lastname' => trim($_POST['lastname']),
+                'firstname' => ucfirst(trim($_POST['firstname'])),
+                'lastname' => ucfirst(trim($_POST['lastname'])),
                 'email' => /*trim($_POST['email'])*/
                     'exempla@email.com',
                 'streetAddress' => trim($_POST['street']),
@@ -107,8 +107,8 @@ class UserformController extends Controller
             if ($validator->isValid()) {
                 $parentdata = array($user->firstname, $user->lastname, $user->email, $user->streetAddress, $user->city, $user->postalcode, $user->phonenumber, $user->id_group);
                 $updatedata = array(
-                    'firstname' => trim($_POST['firstname']),
-                    'lastname' => trim($_POST['lastname']),
+                    'firstname' => ucfirst(trim($_POST['firstname'])),
+                    'lastname' => ucfirst(trim($_POST['lastname'])),
                     'email' => trim($_POST['email']),
                     'streetAddress' => trim($_POST['street']),
                     'city' => trim(mb_strtoupper($_POST['city'])),

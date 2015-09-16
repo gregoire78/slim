@@ -18,6 +18,7 @@ class UsersController extends Controller
     }
 
     public function index(){
+        $this->loadJs('delete_user.js', ['position'=>'last']);
         $this->data['title'] = 'utilisateurs';
         $users = $this->user->all();
         $groups = $this->group->all();
@@ -44,6 +45,19 @@ class UsersController extends Controller
             $this->render('LoId', compact("user", "group"));
         }else{
             $this->app->notFound();
+        }
+    }
+
+    public function delete($firstname, $lastname, $id) {
+        $user = $this->user->find($id);
+        if($user) {//on verifie si l'id user existe
+            $this->user->delete($id);
+        }else{
+            $this->app->notFound();
+        }
+
+        if (!$this->app->request->isXhr()) { // si requete envoyé est (xhr) ajax
+            $this->app->redirect($this->app->urlFor('Lo'));
         }
     }
 }
