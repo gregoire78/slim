@@ -122,7 +122,7 @@ class UserformController extends Controller
                     $return['success'] = "Utilisateur modifié avec succès";
                     $return['urlRedirect'] = $this->app->urlFor('LoUser', array('firstname' => $firstname, 'lastname' =>  $lastname, 'id' => $user->id));
                 }else{
-                    $return['success'] = 'Rien n\'à été modifié';
+                    $return['success'] = 'Rien n\'a été modifié';
                 }
             }else {
                 $return['errors'] = $validator->getErrors();
