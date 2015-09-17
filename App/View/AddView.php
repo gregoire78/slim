@@ -48,7 +48,7 @@ $groupId = isset($return['dataUser'])?$return['dataUser']->id_group:null;
             <div class="form-group has-feedback" id="form-group">
                 <label class="control-label" for="group">Groupe</label>
                 <select class="form-control" title="Groupe" id="group" name="group">
-                    <option value="0"></option>
+                    <option value="0"> - </option>
                     <?php foreach($groups as $group): ?>
                         <?php if(isset($groupId) && $groupId == $group->id): ?>
                         <option value="<?= $group->id ?>" selected><?= App\Vendor\String::my_mb_ucfirst($group->name) ?></option>
