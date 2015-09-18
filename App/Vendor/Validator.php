@@ -76,7 +76,7 @@ class Validator
         if(!empty($this->getField($field)))
         {
             $fieldstr = String::rm_accent($this->getField($field));
-            if (!preg_match('/^[A-Za-z0-9_\\- ]+$/', $fieldstr))
+            if (!preg_match('/^[A-Za-z0-9_\\-\' ]+$/', $fieldstr))
             {
                 $this->errors[$field] = $errorMsg;
             }

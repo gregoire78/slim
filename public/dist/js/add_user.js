@@ -69,31 +69,31 @@ $(document).ready(function($){
                 if(jqXHR.responseJSON['errors']['firstname'] != null)
                 {
                     bootstrap_alert.error(form_firstname, jqXHR.responseJSON['errors']['firstname']);
-                }
+                }else{bootstrap_alert.reset(form_firstname);}
                 if(jqXHR.responseJSON['errors']['lastname'] != null)
                 {
                     bootstrap_alert.error(form_lastname, jqXHR.responseJSON['errors']['lastname']);
-                }
+                }else{bootstrap_alert.reset(form_lastname);}
                 if(jqXHR.responseJSON['errors']['email'] != null)
                 {
                     bootstrap_alert.error(form_email, jqXHR.responseJSON['errors']['email']);
-                }
+                }else{bootstrap_alert.reset(form_email);}
                 if(jqXHR.responseJSON['errors']['street'] != null)
                 {
                     bootstrap_alert.error(form_street, jqXHR.responseJSON['errors']['street']);
-                }
+                }else{bootstrap_alert.reset(form_street);}
                 if(jqXHR.responseJSON['errors']['city'] != null)
                 {
                     bootstrap_alert.error(form_city, jqXHR.responseJSON['errors']['city']);
-                }
+                }else{bootstrap_alert.reset(form_city);}
                 if(jqXHR.responseJSON['errors']['postalCode'] != null)
                 {
                     bootstrap_alert.error(form_postalcode, jqXHR.responseJSON['errors']['postalCode']);
-                }
+                }else{bootstrap_alert.reset(form_postalcode);}
                 if(jqXHR.responseJSON['errors']['phone'] != null)
                 {
                     bootstrap_alert.error(form_phone, jqXHR.responseJSON['errors']['phone']);
-                }
+                }else{bootstrap_alert.reset(form_phone);}
                 if(jqXHR.responseJSON['errors']['group'] != null)
                 {
                     bootstrap_alert.error(form_group, jqXHR.responseJSON['errors']['group']);

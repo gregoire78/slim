@@ -29,4 +29,10 @@ $app->group('/users', function () use ($app) {
     $app->get('/delete/:firstname-:lastname-:id', 'App\Controller\UsersController:delete')->conditions(array('id' => '[0-9]+'))->name('delete');
 });
 
+$app->group('/groups', function () use ($app) {
+
+    $app->get('/', 'App\Controller\GroupsController:index')->name('groups_index');
+
+});
+
 $app->run();

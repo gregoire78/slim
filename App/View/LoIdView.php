@@ -32,6 +32,11 @@ use App\Vendor\String;
             <div class="panel-heading">
                 <h1 class="panel-title">Google Map</h1>
             </div>
+            <noscript>
+                <div style="float: left">
+                    Pour accéder à la carte suivre les <a href="http://www.enable-javascript.com/fr/" target="_blank">instructions pour activer JavaScript dans votre navigateur Web</a>.
+                </div>
+            </noscript>
             <div class="gMap">
                 <div id="map"></div>
                 <div id="pano"></div>

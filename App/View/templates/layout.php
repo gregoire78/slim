@@ -44,7 +44,8 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?= $app->urlFor('Lo') ?>">Utilisateurs</a></li>
-                <li><a href="<?= $app->urlFor('add') ?>">Ajouter</a></li>
+                <li><a href="<?= $app->urlFor('groups_index') ?>">Groupes</a></li>
+                <li><a href="<?= $app->urlFor('add') ?>">Ajouter un utilisateur</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
