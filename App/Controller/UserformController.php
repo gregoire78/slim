@@ -19,6 +19,8 @@ class UserformController extends Controller
 
         $this->loadJs('bootstrap_feedback.js', ['position'=>'last']);
         $this->loadJs('add_user.js', ['position'=>'after:bootstrap_feedback.js']);
+        $this->loadJs(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.min.js', ['location' => 'external', 'position'=>'after:add_user.js']);
+        $this->loadCss(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.css', ['location' => 'external', 'position'=>'last']);
     }
 
     public function index($return){
@@ -28,8 +30,6 @@ class UserformController extends Controller
 
     public function addGet()
     {
-        $this->loadJs(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.min.js', ['location' => 'external', 'position'=>'last']);
-        $this->loadCss(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.css', ['location' => 'external', 'position'=>'last']);
         $this->data['title'] = 'ajouter utilisateur';
         $this->data['breadcrumb'] = array(
             "Accueil" => $this->app->urlFor('home'),
@@ -124,7 +124,7 @@ class UserformController extends Controller
                     $return['success'] = "Utilisateur modifié avec succès";
                     $return['urlRedirect'] = $this->app->urlFor('LoUser', array('firstname' => $firstname, 'lastname' =>  $lastname, 'id' => $user->id));
                 }else{
-                    $return['success'] = 'Rien n\'a été modifié';
+                    $return['info'] = 'Rien n\'a été modifié';
                 }
             }else {
                 $return['errors'] = $validator->getErrors();

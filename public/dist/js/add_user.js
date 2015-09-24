@@ -60,21 +60,27 @@ $(document).ready(function($){
             })
             .done(function(data, textStatus, jqXHR){
                 //alert(data["success"]);
+                var type;
+                var title;
+                if(data["success"] != undefined){ type = 'success'; title = data["success"] }
+                else if(data["info"] != undefined){ type = 'info'; title = data["info"] }
                 swal({
-                    title: "Good Job !",
-                    text: data["success"],
-                    type: "success",
+                    //title: "Good Job !",
+                    title: title,
+                    type: type,
                     showCancelButton: false,
-                    confirmButtonClass: "btn-primary",
+                    confirmButtonClass: "btn-default",
                     confirmButtonText: "Ok",
-                    closeOnConfirm: false
+                    closeOnConfirm: true
                     },
                     function(){
                     if(data["urlRedirect"] != undefined) {
                         window.location.href = data["urlRedirect"];
                     }
                 });
-                setTimeout(function(){if(data["urlRedirect"] != undefined) {
+                setTimeout(function(){
+                    swal.close();
+                    if(data["urlRedirect"] != undefined) {
                     window.location.href = data["urlRedirect"];
                 }}, 5000);
             })
