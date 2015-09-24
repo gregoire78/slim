@@ -28,6 +28,8 @@ class UserformController extends Controller
 
     public function addGet()
     {
+        $this->loadJs(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.min.js', ['location' => 'external', 'position'=>'last']);
+        $this->loadCss(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.css', ['location' => 'external', 'position'=>'last']);
         $this->data['title'] = 'ajouter utilisateur';
         $this->data['breadcrumb'] = array(
             "Accueil" => $this->app->urlFor('home'),

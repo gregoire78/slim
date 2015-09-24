@@ -163,7 +163,8 @@ class Controller
         $this->loadJs(ROOT."bootstrap-3.3.5-dist/js/bootstrap.min.js",['location' => 'external', 'position'=>'after:dist/js/jquery-1.11.3.min.js']);
     }
 
-    public function loadModel($model_name){
+    public function loadModel($model_name)
+    {
         $this->$model_name = App::getInstance()->getTable($model_name);
     }
 }

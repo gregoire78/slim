@@ -59,10 +59,24 @@ $(document).ready(function($){
                 //$form.find('#message').val('');
             })
             .done(function(data, textStatus, jqXHR){
-                alert(data["success"]);
-                if(data["urlRedirect"] != undefined) {
+                //alert(data["success"]);
+                swal({
+                    title: "Good Job !",
+                    text: data["success"],
+                    type: "success",
+                    showCancelButton: false,
+                    confirmButtonClass: "btn-primary",
+                    confirmButtonText: "Ok",
+                    closeOnConfirm: false
+                    },
+                    function(){
+                    if(data["urlRedirect"] != undefined) {
+                        window.location.href = data["urlRedirect"];
+                    }
+                });
+                setTimeout(function(){if(data["urlRedirect"] != undefined) {
                     window.location.href = data["urlRedirect"];
-                }
+                }}, 5000);
             })
             .fail(function (jqXHR, textStatus){
                 //alert(jqXHR.responseJSON['error']);
