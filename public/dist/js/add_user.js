@@ -78,11 +78,11 @@ $(document).ready(function($){
                         window.location.href = data["urlRedirect"];
                     }
                 });
-                setTimeout(function(){
+                /*setTimeout(function(){
                     swal.close();
                     if(data["urlRedirect"] != undefined) {
                     window.location.href = data["urlRedirect"];
-                }}, 5000);
+                }}, 5000);*/
             })
             .fail(function (jqXHR, textStatus){
                 //alert(jqXHR.responseJSON['error']);

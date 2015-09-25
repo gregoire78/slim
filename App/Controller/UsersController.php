@@ -15,6 +15,9 @@ class UsersController extends Controller
         parent::__construct();
         $this->loadModel('user');
         $this->loadModel('group');
+
+        $this->loadJs(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.min.js', ['location' => 'external', 'position'=>'last']);
+        $this->loadCss(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.css', ['location' => 'external', 'position'=>'last']);
     }
 
     public function index(){

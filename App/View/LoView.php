@@ -36,7 +36,7 @@ use App\Vendor\String;
                 <a href="<?= $urluser ?>" class="btn btn-default btn-xs" title="voir fiche de <?= $user->name ?>">Fiche</a>
             </noscript>
             <a href="<?= $this->app->urlFor('edit', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)); ?>" type="button" class="btn btn-info btn-xs" title="Editer <?= $user->name ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-            <a href="<?= $this->app->urlFor('delete', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)); ?>" class="btn btn-danger btn-xs" type="button" title="Supprimer <?= $user->name ?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            <a href="<?= $this->app->urlFor('delete', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id)); ?>" class="btn btn-danger btn-xs" type="button" title="Supprimer <?= $user->name ?>" data-user="<?= $user->name ?>" ><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
         </td>
     </tr>
     <?php endforeach; ?>
