@@ -40,7 +40,7 @@ class Controller
         $this->data['app'] = $this->app;
         if($data){extract($data);};
         ob_start();
-        include "../App/View/{$page}View.php";
+        include "App/View/{$page}View.php";
         $this->data['content'] = ob_get_clean();
         $this->app->render('layout.php', $this->data);
     }

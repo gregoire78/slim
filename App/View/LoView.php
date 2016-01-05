@@ -28,8 +28,8 @@ use App\Vendor\String;
     <tr>
         <td <?= $onclick ?>><?= $user->id; ?></td>
         <td <?= $onclick ?>><?= $user->lastname; ?></td>
-        <td <?= $onclick ?>><?= $user->firstname; ?></td>
-        <td <?= $onclick ?>><?= App\Vendor\String::my_mb_ucfirst($user->group) ?></td>
+        <td <?= $onclick ?>><?= $user->firstname ?></td>
+        <td <?= $onclick ?>><?= String::my_mb_ucfirst($user->group) ?></td>
         <td <?= $onclick ?>><?= $user->dateRegister; ?></td>
         <td><!--<a href="<?/*=$this->app->urlFor('Lo').$url; */?>" type="button" class="btn btn-default btn-xs">Voir la fiche</a>-->
             <noscript>

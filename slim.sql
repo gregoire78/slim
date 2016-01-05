@@ -16,7 +16,6 @@ CREATE TABLE `groups` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-TRUNCATE `groups`;
 INSERT INTO `groups` (`id`, `name`) VALUES
 (1,	'simple utilisateur'),
 (2,	'administrateur'),
@@ -40,7 +39,6 @@ CREATE TABLE `users` (
   CONSTRAINT `users_ibfk_2` FOREIGN KEY (`id_group`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-TRUNCATE `users`;
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `streetAddress`, `city`, `postalcode`, `phonenumber`, `ip`, `date_register`, `id_group`) VALUES
 (1,	'Grégoire',	'Joncour',	'greg.autre@gmail.com',	'27 rue des fontaines',	'MAREIL SUR MAULDRE',	'78124',	'0134758420',	'192.168.59.104',	'2015-09-08 18:52:08',	2),
 (2,	'Anne',	'Joncour',	'example@mail.com',	'1 avenue de la chardonniere',	'MAREIL SUR MAULDRE',	'78124',	'0134758420',	'192.168.59.104',	'2015-09-13 13:41:58',	1),
@@ -55,7 +53,6 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `streetAddress`, `c
 (12,	'Frédéric',	'Plancqueel',	'exempla@email.com',	'10 allée du château',	'MAULE',	'78580',	'0130907410',	'192.168.0.1',	'2015-09-14 23:05:38',	1),
 (13,	'Laurent',	'Richard',	'exempla@email.com',	'1 rue orléans',	'MAULE',	'78580',	'0130909064',	'192.168.0.1',	'2015-09-14 23:32:23',	2),
 (14,	'Pierre',	'Picard',	'exempla@email.com',	'11 allée du dessus des prés',	'MAREIL SUR MAULDRE',	'78124',	'0684662756',	'192.168.0.1',	'2015-09-14 23:58:27',	1),
-(15,	'truc',	'muche',	'exempla@email.com',	'27 rue des fontaines',	'MAREIL SUR MAULDRE',	'78124',	'0134758420',	'192.168.0.1',	'2015-09-15 00:15:16',	2),
-(17,	'test',	'test',	'ghyff@email.com',	'test',	'TEST',	'78124',	'0000000000',	'192.168.0.1',	'2015-09-16 00:14:07',	1);
+(15,	'truc',	'muche',	'exempla@email.com',	'27 rue des fontaines',	'MAREIL SUR MAULDRE',	'78124',	'0134758420',	'192.168.0.1',	'2015-09-15 00:15:16',	2);
 
--- 2015-09-15 23:39:04
+-- 2016-01-05 15:50:27

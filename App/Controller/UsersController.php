@@ -42,8 +42,8 @@ class UsersController extends Controller
                 "Utilisateurs" => $this->app->urlFor('Lo'),
                 ucfirst($this->data['title']) => "",
             );
-            if ($firstname !== String::rm_accent(mb_strtolower($user->firstname)) || $lastname !== String::rm_accent(mb_strtolower($user->lastname))) {
-                $this->app->redirect(ROOT . "users/" . String::rm_accent(mb_strtolower($user->firstname . "-" . $user->lastname . "-" . $user->id)));
+            if ($firstname !== String::urlFormat($user->firstname) || $lastname !== String::urlFormat($user->lastname)) {
+                $this->app->redirect(URI . "users/" . String::urlFormat($user->firstname . "-" . $user->lastname . "-" . $user->id));
             }
             $this->render('LoId', compact("user", "group"));
         }else{

@@ -42,7 +42,7 @@ class Avatar
         Image::configure(array('driver' => 'imagick'));
 
         $image = Image::make($avatarUrl);
-        $image->save("dist/img/avatars/{$nameFile}.png");
+        $image->save("public/dist/img/avatars/{$nameFile}.png");
         return $image->encode('data-url');
     }
 }

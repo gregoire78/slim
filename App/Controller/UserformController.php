@@ -66,9 +66,9 @@ class UserformController extends Controller
         }
 
         if ($this->app->request->isXhr()) { // si requete envoyé est (xhr) ajax
-            if (!empty($return['errors'])) {
-                header('Internal Error', true, 500);
-            }
+            //if (!empty($return['errors'])) {
+            //    header('Internal Error', true, 500);
+            //}
             $this->app->response->headers->set('Content-Type', 'application/json');
             die(json_encode($return));
         }else{
@@ -92,8 +92,8 @@ class UserformController extends Controller
             );
             $return['h1']='Modifier : '.$user->name;
             $return['dataUser'] = $user;
-            if ($firstname !== String::rm_accent(mb_strtolower($user->firstname)) || $lastname !== String::rm_accent(mb_strtolower($user->lastname))) {
-                $this->app->redirect(ROOT . "users/edit/" . String::rm_accent(mb_strtolower($user->firstname . "-" . $user->lastname . "-" . $user->id)));
+            if ($firstname !== String::urlFormat($user->firstname) || $lastname !== String::urlFormat($user->lastname)) {
+                $this->app->redirect(URI . "users/edit/" . String::urlFormat($user->firstname . "-" . $user->lastname . "-" . $user->id));
             }
             $this->index($return);
         }else{
@@ -131,9 +131,9 @@ class UserformController extends Controller
             }
 
             if ($this->app->request->isXhr()) { // si requete envoyé est (xhr) ajax
-                if (!empty($return['errors'])) {
-                    header('Internal Error', true, 500);
-                }
+                //if (!empty($return['errors'])) {
+                //    header('Internal Error', true, 500);
+                //}
                 $this->app->response->headers->set('Content-Type', 'application/json');
                 die(json_encode($return));
             } else {

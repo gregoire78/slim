@@ -37,6 +37,7 @@ class App
     {
         if(is_null($this->db_instance))
         {
+            //$this->db_instance = new MysqlDatabase('b5nuwo12','b5nuwo12','slim','sql2.olympe.in');
             $this->db_instance = new MysqlDatabase('slim');
         }
         return $this->db_instance;
