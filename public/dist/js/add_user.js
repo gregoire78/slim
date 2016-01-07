@@ -53,7 +53,7 @@ $(document).ready(function($){
         var $form = $(this);
         $form.find('button[type=submit]').html('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>&nbsp;&nbsp;&nbsp;Chargement ...');
 
-        $.ajax($form.attr('action'), {data:  $form.serializeArray(),type: 'POST', dataType:'json'})
+        $.ajax({data:  $form.serializeArray(),type: 'POST', dataType:'json',cache : false})
             .always(function (){
                 $form.find('button[type=submit]').text('Enregistrer');
                 //$form.find('#message').val('');
@@ -94,6 +94,12 @@ $(document).ready(function($){
                     {
                         bootstrap_alert.error(form_group, jqXHR.responseJSON['errors']['group']);
                     }
+
+                    var errr = "";
+                    $.each(jqXHR.responseJSON['errors'], function(key, val){
+                        errr += val+'\n';
+                    });
+                    alert(errr);
                 } else {
                     var type;
                     var title;

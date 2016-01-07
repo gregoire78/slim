@@ -12,7 +12,7 @@ define('ROOTHOST', $root);*/
 $uri = $app->request->getRootUri().'/'; // racine URI
 $server =$app->request->getHost();
 define('URI', $uri);
-$root = $uri."/public/"; // racine pour le public
+$root = $uri."public/"; // racine pour le public
 define('ROOT', $root);
 $app->setName('Slim');
 

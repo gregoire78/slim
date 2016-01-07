@@ -51,7 +51,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="padding-top: 65px;">
+<div class="content container-fluid">
 
     <ul class="breadcrumb">
         <?php
