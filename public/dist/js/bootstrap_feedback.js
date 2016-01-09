@@ -40,10 +40,17 @@ bootstrap_alert.warning = function(formgrput,message,trigger) {
     // boutton submit
     $("button[type=submit]").removeClass("btn-primary").removeClass("btn-danger").addClass("btn-warning");
 };
-bootstrap_alert.reset = function(formgrput) {
-
-    $("#"+formgrput).removeClass('has-error').removeClass('has-warning').removeClass('has-success').find('input, iframe, select').popover('destroy');
-    $("#"+formgrput+" > .iconStatus").removeClass('glyphicon-remove').removeClass('glyphicon-ok');
+bootstrap_alert.reset = function(formgrput, all) {
+    all = all || false;
+    if(all === true) {
+        $.each(formgrput, function (key, val) {
+            $("#"+val).removeClass('has-error').removeClass('has-warning').removeClass('has-success').find('input, iframe, select').popover('destroy');
+            $("#"+val+" > .iconStatus").removeClass('glyphicon-remove').removeClass('glyphicon-ok');
+        });
+    } else {
+        $("#"+formgrput).removeClass('has-error').removeClass('has-warning').removeClass('has-success').find('input, iframe, select').popover('destroy');
+        $("#"+formgrput+" > .iconStatus").removeClass('glyphicon-remove').removeClass('glyphicon-ok');
+    }
 
     $("button[type=submit]").removeClass("btn-danger").removeClass("btn-warning").addClass("btn-primary");
 };
