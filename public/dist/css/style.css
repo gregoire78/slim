@@ -4,9 +4,13 @@ html {
     position: relative;
     min-height: 100%;
 }
+body{
+    background: #272b30 url(/slim/public/dist/img/escheresque-dark.png) fixed;
+}
 .content {
     padding-top: 65px;
     padding-bottom: 60px;
+    background-color: transparent;
 }
 /*.footer {
     position: absolute;
