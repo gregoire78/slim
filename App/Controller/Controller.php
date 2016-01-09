@@ -155,12 +155,14 @@ class Controller
     {
         $this->loadCss(ROOT."dist/css/bootstrap.min.css",['location' => 'external', 'position'=>'first']);
         $this->loadCss("style.css",['position'=>'after:dist/css/bootstrap.min.css']);
+        $this->loadCss("jquery.mCustomScrollbar.css",['position'=>'after:dist/css/style.css']);
     }
 
     protected function loadBaseJs()
     {
         $this->loadJs("jquery-2.1.4.min.js",['position'=>'first']);
-        $this->loadJs(ROOT."bootstrap-3.3.5-dist/js/bootstrap.min.js",['location' => 'external', 'position'=>'after:dist/js/jquery-1.11.3.min.js']);
+        $this->loadJs(ROOT."bootstrap-3.3.5-dist/js/bootstrap.min.js",['location' => 'external', 'position'=>'after:jquery-2.1.4.min.js']);
+        $this->loadJs("jquery.mCustomScrollbar.concat.min.js",['position'=>'after:'.ROOT.'bootstrap-3.3.5-dist/js/bootstrap.min.js']);
     }
 
     public function loadModel($model_name)

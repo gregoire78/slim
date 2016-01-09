@@ -226,10 +226,6 @@ body{
 }
 
 
-.navbar {
-    animation-duration: 1s;
-    animation-name: slidein;
-}
 
 @keyframes slidein {
     from {
@@ -244,4 +240,16 @@ body{
 }
 .btn:focus {
     outline: 0;
+}
+
+/* SCROLLBAR
+----------------------------*/
+#mCSB_1_scrollbar_vertical{
+    margin-top: 60px;
+}
+#mCSB_1_container_wrapper{
+    margin-right: 5px;
+}
+#mCSB_1_container{
+    margin-right: 5px;
 }

@@ -27,6 +27,13 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        html, body{
+            height: 100%;
+            overflow: hidden;
+            min-width: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -90,6 +97,15 @@
 <script type="text/javascript">
     $(function () {
         $('[data-toggle="tooltip"]').tooltip({html:true,placement:"right"});
+        $(window).load(function(){
+            $.mCustomScrollbar.defaults.theme="inset"; //set "inset" as the default theme
+            $.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
+            $("body").mCustomScrollbar({
+                setTop: 0,
+                alwaysShowScrollbar: 1
+            });
+            console.log('ghjgk')
+        });
     });
 </script>
 </body>
