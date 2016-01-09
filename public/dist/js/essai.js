@@ -142,7 +142,7 @@ $(document).ready(function () {
         });
     });*/
 
-    var ip = '8.8.8.8';
+    /*var ip = '8.8.8.8';
     $.getJSON("http://www.telize.com/geoip/"+ip,
         function(json) {
             console.log("Geolocation information for IP address : ", json.ip);
@@ -153,5 +153,5 @@ $(document).ready(function () {
             console.log("Longitude : ", json.longitude);
             console.log(json);
         }
-    );
+    );*/
 });
