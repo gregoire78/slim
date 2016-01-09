@@ -225,7 +225,10 @@ body{
     background-color: transparent;
 }
 
-
+.navbar {
+    animation-duration: 1s;
+    animation-name: slidein;
+}
 
 @keyframes slidein {
     from {
@@ -244,6 +247,10 @@ body{
 
 /* SCROLLBAR
 ----------------------------*/
+/*html, body{
+    height: 100%;
+    overflow: hidden;
+}
 #mCSB_1_scrollbar_vertical{
     margin-top: 60px;
 }
@@ -252,4 +259,4 @@ body{
 }
 #mCSB_1_container{
     margin-right: 5px;
-}
+}*/

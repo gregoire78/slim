@@ -5,7 +5,7 @@
 //
 
 require 'vendor/autoload.php';
-$app = new \Slim\Slim(['templates.path' => 'App/View/templates']);
+$app = new \Slim\Slim(['debug' => true,'templates.path' => 'App/View/templates']);
 
 /*$root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $app->request->getRootUri() . "/"; // racine pour le public (pour mail etc...)
 define('ROOTHOST', $root);*/
@@ -37,5 +37,10 @@ $app->group('/groups', function () use ($app) {
     $app->get('/', 'App\Controller\GroupsController:index')->name('groups_index');
 
 });
-
+/*$app->error(function (\Exception $e) use ($app) {
+    $app->render('error.php');
+});*/
+//$app->notFound(function () use ($app) {
+//    $app->render('404.html');
+//});
 $app->run();

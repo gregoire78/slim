@@ -21,7 +21,7 @@ $(document).ready(function($){
      */
     var liveVerification = function (form_group_id, opt) {
         opt = opt || {event:"keyup"};
-        $("#"+form_group_id+" > input").bind(opt.event, function () {
+        $("#"+form_group_id).find('input, select, iframe').bind(opt.event, function () {
             bootstrap_alert.reset(form_group_id);
         });
     };
