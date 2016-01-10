@@ -51,4 +51,21 @@ class Stringly
     public static function urlFormat($str){
         return mb_strtolower(Stringly::rm_accent($str));
     }
+
+    /**
+     * Met en Majuscule les nom composés
+     * @param $prenom
+     * @return mixed
+     */
+    public static function ucName($prenom) {
+        $total=strlen($prenom); // taille de la chaine
+        $prenom[0] = strtoupper($prenom[0]);
+        for ($i=1 ; $i < $total-1; $i++) {
+            if ($prenom[$i] == "-") {
+                $prenom[$i+1] = strtoupper($prenom[$i+1]);
+                $i++;
+            }
+        }
+        return $prenom;
+    }
 }

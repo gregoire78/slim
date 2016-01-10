@@ -46,7 +46,7 @@ class UserformController extends Controller
         $validator = $this->validatorUser();
         if ($validator->isValid()) {
             $this->user->create([
-                'firstname' => ucfirst(trim($_POST['firstname'])),
+                'firstname' => Stringly::ucName(trim($_POST['firstname'])),
                 'lastname' => ucfirst(trim($_POST['lastname'])),
                 'email' => /*trim($_POST['email'])*/
                     'exempla@email.com',
@@ -109,7 +109,7 @@ class UserformController extends Controller
             if ($validator->isValid()) {
                 $parentdata = array($user->firstname, $user->lastname, $user->email, $user->streetAddress, $user->city, $user->postalcode, $user->phonenumber, $user->id_group);
                 $updatedata = array(
-                    'firstname' => ucfirst(trim($_POST['firstname'])),
+                    'firstname' => Stringly::ucName(trim($_POST['firstname'])),
                     'lastname' => ucfirst(trim($_POST['lastname'])),
                     'email' => trim($_POST['email']),
                     'streetAddress' => trim($_POST['street']),
