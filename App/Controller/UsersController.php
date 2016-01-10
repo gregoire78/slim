@@ -7,7 +7,7 @@
 namespace App\Controller;
 
 
-use App\Vendor\String;
+use App\Vendor\Stringly;
 
 class UsersController extends Controller
 {
@@ -42,8 +42,8 @@ class UsersController extends Controller
                 "Utilisateurs" => $this->app->urlFor('Lo'),
                 ucfirst($this->data['title']) => "",
             );
-            if ($firstname !== String::urlFormat($user->firstname) || $lastname !== String::urlFormat($user->lastname)) {
-                $this->app->redirect(URI . "users/" . String::urlFormat($user->firstname . "-" . $user->lastname . "-" . $user->id));
+            if ($firstname !== Stringly::urlFormat($user->firstname) || $lastname !== Stringly::urlFormat($user->lastname)) {
+                $this->app->redirect(URI . "users/" . Stringly::urlFormat($user->firstname . "-" . $user->lastname . "-" . $user->id));
             }
             $this->render('LoId', compact("user", "group"));
         }else{

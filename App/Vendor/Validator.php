@@ -32,7 +32,7 @@ class Validator
     {
         if(!empty($this->getField($field)))
         {
-            $fieldstr = String::rm_accent($this->getField($field));
+            $fieldstr = Stringly::rm_accent($this->getField($field));
             if (!preg_match('/^[A-Za-z0-9_\\- ]+$/', $fieldstr))
             {
                 $this->errors[$field] = $errorMsg;
@@ -75,7 +75,7 @@ class Validator
     {
         if(!empty($this->getField($field)))
         {
-            $fieldstr = String::rm_accent($this->getField($field));
+            $fieldstr = Stringly::rm_accent($this->getField($field));
             if (!preg_match('/^[A-Za-z0-9_\\-\' ]+$/', $fieldstr))
             {
                 $this->errors[$field] = $errorMsg;
@@ -89,7 +89,7 @@ class Validator
     {
         if(!empty($this->getField($field)))
         {
-            $fieldstr = String::rm_accent($this->getField($field));
+            $fieldstr = Stringly::rm_accent($this->getField($field));
             if (!preg_match('/^[A-Za-z_\\- ]+$/', $fieldstr))
             {
                 $this->errors[$field] = $errorMsg;

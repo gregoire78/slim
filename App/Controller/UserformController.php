@@ -7,7 +7,7 @@
 namespace App\Controller;
 
 use App\App;
-use App\Vendor\String;
+use App\Vendor\Stringly;
 use App\Vendor\Validator;
 
 class UserformController extends Controller
@@ -60,7 +60,7 @@ class UserformController extends Controller
             ]);
             $return['success'] = 'Utilisateur créé';
             $user = $this->user->find(App::getInstance()->getDb()->lastInsertId()); // on récupère le dernier id pour le lien de retour
-            $return['urlRedirect'] = $this->app->urlFor('LoUser', array('firstname' => String::urlFormat($user->firstname), 'lastname' =>  String::urlFormat($user->lastname), 'id' => $user->id));
+            $return['urlRedirect'] = $this->app->urlFor('LoUser', array('firstname' => Stringly::urlFormat($user->firstname), 'lastname' =>  Stringly::urlFormat($user->lastname), 'id' => $user->id));
         } else {
             $return['errors'] = $validator->getErrors();
         }
@@ -92,8 +92,8 @@ class UserformController extends Controller
             );
             $return['h1']='Modifier : '.$user->name;
             $return['dataUser'] = $user;
-            if ($firstname !== String::urlFormat($user->firstname) || $lastname !== String::urlFormat($user->lastname)) {
-                $this->app->redirect(URI . "users/edit/" . String::urlFormat($user->firstname . "-" . $user->lastname . "-" . $user->id));
+            if ($firstname !== Stringly::urlFormat($user->firstname) || $lastname !== Stringly::urlFormat($user->lastname)) {
+                $this->app->redirect(URI . "users/edit/" . Stringly::urlFormat($user->firstname . "-" . $user->lastname . "-" . $user->id));
             }
             $this->index($return);
         }else{

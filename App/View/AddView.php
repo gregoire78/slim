@@ -51,9 +51,9 @@ $groupId = isset($return['dataUser'])?$return['dataUser']->id_group:null;
                     <option value="0"> - </option>
                     <?php foreach($groups as $group): ?>
                         <?php if(isset($groupId) && $groupId == $group->id): ?>
-                        <option value="<?= $group->id ?>" selected><?= App\Vendor\String::my_mb_ucfirst($group->name) ?></option>
+                        <option value="<?= $group->id ?>" selected><?= App\Vendor\Stringly::my_mb_ucfirst($group->name) ?></option>
                         <?php else: ?>
-                        <option value="<?= $group->id ?>"><?= App\Vendor\String::my_mb_ucfirst($group->name) ?></option>
+                        <option value="<?= $group->id ?>"><?= App\Vendor\Stringly::my_mb_ucfirst($group->name) ?></option>
                         <?php endif ?>
                     <?php endforeach; ?>
                 </select>

@@ -7,7 +7,7 @@
 namespace App\Vendor;
 
 
-class String
+class Stringly
 {
     /**
      * première lettre en majuscule
@@ -49,6 +49,6 @@ class String
      * @return mixed|string
      */
     public static function urlFormat($str){
-        return mb_strtolower(String::rm_accent($str));
+        return mb_strtolower(Stringly::rm_accent($str));
     }
 }
