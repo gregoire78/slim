@@ -23,6 +23,7 @@ class UserformController extends Controller
         $this->loadCss(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.css', ['location' => 'external', 'position'=>'last']);
         $this->loadJs(ROOT.'jquery.inputmask-3.2.5/dist/jquery.inputmask.bundle.js', ['location' => 'external', 'position'=>'last']);
         $this->loadJs(ROOT.'dist/js/add_user.js', ['location' => 'external', 'position'=>'last']);
+        $this->loadJs(ROOT.'dist/js/gapi_autocomplete.js', ['location' => 'external', 'position'=>'last']);
     }
 
     public function index($return){
