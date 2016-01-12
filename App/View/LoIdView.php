@@ -60,5 +60,5 @@ use App\Vendor\Stringly;
 
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=drawing&signed_in=true">//v=3.23&signed_in=true
+        src="https://maps.googleapis.com/maps/api/js?key=<?= $this->data['gapi-key'] ?>&callback=initMap&libraries=drawing&signed_in=true">//v=3.23&signed_in=true
 </script>

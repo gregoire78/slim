@@ -15,17 +15,11 @@ $(document).ready(function($){
         'group' : 'form-group'
     };
 
-    /**
-     * function de vérification with bind
-     * @param form_group_id
-     * @param opt
-     */
-    var liveVerification = function (form_group_id, opt) {
-        opt = opt || {event:"keyup"};
-        $("#"+form_group_id).find('input, select, iframe').bind(opt.event, function () {
-            bootstrap_alert.reset(form_group_id);
-        });
-    };
+    // verifications en direct
+    $(".form-control").on("change keyup", function (e) {
+        console.log(e.target.id, e.target.parentElement.id);
+        bootstrap_alert.reset(e.target.parentElement.id);
+    });
 
     /**
      * fonction affichage des erreurs json AJAX
@@ -39,16 +33,6 @@ $(document).ready(function($){
             bootstrap_alert.error(form_group_id, message);
         }else{bootstrap_alert.reset(form_group_id);}
     };
-
-    // verifications en direct
-    liveVerification(form_group_id.firstname);
-    liveVerification(form_group_id.lastname);
-    liveVerification(form_group_id.email);
-    liveVerification(form_group_id.street);
-    liveVerification(form_group_id.city);
-    liveVerification(form_group_id.postalCode);
-    liveVerification(form_group_id.phone);
-    liveVerification(form_group_id.group, {event:"change"});
 
     bootstrap_alert();
     $('#add_user').on('submit', function (e) {

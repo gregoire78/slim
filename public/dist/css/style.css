@@ -260,3 +260,50 @@ body{
 #mCSB_1_container{
     margin-right: 5px;
 }*/
+
+
+/* GOOGLE MAP - ADDUSER
+--------------------*/
+#map-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+#map-canvas {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#container-c, .breadcrumb {
+    z-index: 100;
+    position: relative;
+}
+
+/* FORMULAIRE GOOGLE
+-----------------------*/
+#add_user input, #add_user select {
+    background-color: rgba(30, 30, 30, 0.58);
+    color: #FFFFFF;
+}
+#add_user input:focus, #add_user select:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.pac-container {
+    background-color: #161617;
+}
+.pac-item-query {
+    color: white;
+}
+.pac-item:hover, .pac-item-selected {
+    background-color: #4F4F4F;
+}

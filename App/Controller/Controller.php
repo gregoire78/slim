@@ -21,6 +21,8 @@ class Controller
         $this->data['title'] = '';
         $this->data['breadcrumb'] = array();
 
+        $this->data['gapi-key'] = "AIzaSyCQvNIyP2d-8QUabyIJEIHtf41iaNue_7c";
+
         $this->data['css'] = array(
             'internal'  => array(),
             'external'  => array()
