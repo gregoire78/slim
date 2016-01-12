@@ -23,7 +23,7 @@ $groupId = isset($return['dataUser'])?$return['dataUser']->id_group:null;
             </div>
             <div class="panel-body">
                 <?php !(\Slim\Slim::getInstance()->request->isXhr()) && !empty($return['errors']) ? var_dump($return['errors']) : '' ?>
-                <form action="#" method="post" id="add_user">
+                <form action="#" method="post" id="add_user" onreset="reset_map()">
                     <div class="form-group has-feedback" id="form-firstname">
                         <label class="control-label" for="firstname">Prénom</label>
                         <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom" value="<?= $firstname ?>">

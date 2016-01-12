@@ -122,3 +122,11 @@ google.maps.event.addDomListener(window, "resize", function() {
     google.maps.event.trigger(map, "resize");
     map.setCenter(center);
 });
+
+function reset_map() {
+    var center = map.getCenter();
+    console.log(center.lat(), center.lng());
+    if (center.lat() != 47.02777626053319 || center.lng() != -4.6862001953124945) {
+        initMap();
+    }
+}
