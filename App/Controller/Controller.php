@@ -151,14 +151,14 @@ class Controller
         }
     }
 
-    protected function loadBaseCss()
+    private function loadBaseCss()
     {
         $this->loadCss(ROOT."dist/css/bootstrap.min.css",['location' => 'external', 'position'=>'first']);
         $this->loadCss("style.css",['position'=>'after:dist/css/bootstrap.min.css']);
         //$this->loadCss("jquery.mCustomScrollbar.css",['position'=>'after:dist/css/style.css']);
     }
 
-    protected function loadBaseJs()
+    private function loadBaseJs()
     {
         $this->loadJs("jquery-2.1.4.min.js",['position'=>'first']);
         $this->loadJs(ROOT."bootstrap-3.3.5-dist/js/bootstrap.min.js",['location' => 'external', 'position'=>'after:jquery-2.1.4.min.js']);

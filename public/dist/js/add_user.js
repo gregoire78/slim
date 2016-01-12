@@ -2,6 +2,7 @@
  * Created by Grégoire on 06/08/2015.
  */
 $(document).ready(function($){
+    $(":input").inputmask();  //static mask
 
     var form_group_id = {
         'firstname' : 'form-firstname',

@@ -18,9 +18,11 @@ class UserformController extends Controller
         $this->loadModel('user');
 
         $this->loadJs('bootstrap_feedback.js', ['position'=>'last']);
-        $this->loadJs('add_user.js', ['position'=>'after:bootstrap_feedback.js']);
+        $this->loadJs("addressSearch.js",['position'=>'last']);
         $this->loadJs(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.min.js', ['location' => 'external', 'position'=>'after:add_user.js']);
         $this->loadCss(ROOT.'bootstrap-sweetalert-dist/lib/sweet-alert.css', ['location' => 'external', 'position'=>'last']);
+        $this->loadJs(ROOT.'jquery.inputmask-3.2.5/dist/jquery.inputmask.bundle.js', ['location' => 'external', 'position'=>'last']);
+        $this->loadJs(ROOT.'dist/js/add_user.js', ['location' => 'external', 'position'=>'last']);
     }
 
     public function index($return){
