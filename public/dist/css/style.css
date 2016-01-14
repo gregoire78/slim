@@ -21,6 +21,7 @@ body{
     text-align: center
 }*/
 .footer {
+    background-image: linear-gradient(transparent, #2E3338);
     position: absolute;
     bottom: 0;
     width: 100%;
