@@ -17,7 +17,7 @@ $(document).ready(function($){
 
     // verifications en direct
     $(".form-control").on("change keyup", function (e) {
-        console.log(e.target.id, e.target.parentElement.id);
+        //console.log(e.target.id, e.target.parentElement.id);
         bootstrap_alert.reset(e.target.parentElement.id);
     });
 

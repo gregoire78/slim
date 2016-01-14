@@ -75,7 +75,17 @@ $groupId = isset($return['dataUser'])?$return['dataUser']->id_group:null;
     </div>
 </div>
 </div>
+<script type="text/javascript">
+    <?php if(isset($street)): ?>
+    var address = "<?= $street . ", " . $postalcode . " " . $city; ?>";
+    <?php endif; ?>
+    var geocenterh = {
+        center: {lat: 47.02777626053319, lng: 355.3137998046875},
+        zoom: 6
+    }
+</script>
 <div id="map-container">
     <div id="map-canvas"></div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<?= $this->data['gapi-key'] ?>&signed_in=true&libraries=places"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<?= $this->data['gapi-key'] ?>&libraries=places"></script>
