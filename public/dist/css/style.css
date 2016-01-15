@@ -59,16 +59,16 @@ body{
 
 /* ERROR */
 .popError {
-    background-color: #ff4136;
+    background-color: #EC4D49/*#ff4136*/;
     border: none !important;;
 }
 
 .popError.bottom>.arrow {
-    border-bottom-color: #ff4136;
+    border-bottom-color: #EC4D49;
 }
 
 .popError.bottom>.arrow:after {
-    border-bottom-color: #ff4136;
+    border-bottom-color: #EC4D49;
 }
 
 .popError > .popover-content {
