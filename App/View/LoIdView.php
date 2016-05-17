@@ -5,6 +5,10 @@
 //
 use App\Vendor\Stringly;
 ?>
+<div class="alert alert-info" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Ces informations ne sont pas réelles et ne sont là qu'à titre indictif !
+</div>
 <h1><?= $user->name ?>&nbsp;&nbsp;<a href="<?= $this->app->urlFor('edit', array('firstname' => Stringly::urlFormat($user->firstname), 'lastname' => Stringly::urlFormat($user->lastname), 'id' => $user->id)) ?>" class="btn btn-default" type="button" title="Editer <?= $user->name ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></h1>
 <div class="row">
     <div class="col-md-5">

@@ -14,7 +14,6 @@
     <title><?= $app->getName() ?> | <?= $title ?></title>
     <link rel="shortcut icon" href="<?= ROOT ?>dist/img/favicon.png" type="image/png">
     <link rel="icon" href="<?= ROOT ?>dist/img/favicon.png" type="image/png">
-
 <?php foreach($css['external'] as $cs): ?>
     <link rel="stylesheet" href="<?= $cs ?>" type="text/css"/>
 <?php endforeach; ?>
@@ -27,6 +26,17 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55961594-2', 'auto');
+  ga('send', 'pageview');
+  ga('send', 'social', 'Facebook', 'share', 'http://www.gregoirejoncour.xyz');
+  ga('send', 'social', 'Twitter', 'Tweet', 'http://www.gregoirejoncour.xyz');
+</script>
 </head>
 <body>
 
@@ -77,7 +87,10 @@
 
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">Copyright &copy; <?= date("Y") ?> Grégoire JONCOUR.</p>
+        <p>Copyright &copy; <?= date("Y") ?> Grégoire JONCOUR.<br>
+		<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.gregoirejoncour.xyz%2F">W3C validation</a><br>
+		<a href="https://www.ssllabs.com/ssltest/analyze.html?d=gregoirejoncour.xyz">SSL LAbs</a>
+		</p>
     </div>
 </footer><!-- /footer -->
 
@@ -102,5 +115,6 @@
         //});
     });
 </script>
+
 </body>
 </html>

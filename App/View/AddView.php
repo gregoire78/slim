@@ -67,7 +67,7 @@ $groupId = isset($return['dataUser'])?$return['dataUser']->id_group:null;
                     </div>
                     <div class="form-group" id="form-submit">
                         <button type="submit" class="btn btn-primary btn-lg">Enregistrer</button>
-                        <button type="reset" class="btn btn-default btn-lg">Reset</button>
+                        <button type="reset" class="btn btn-link">Reset</button>
                     </div>
                 </form>
             </div>

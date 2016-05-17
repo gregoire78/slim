@@ -156,7 +156,8 @@ class Controller
     private function loadBaseCss()
     {
         $this->loadCss(ROOT."dist/css/bootstrap.min.css",['location' => 'external', 'position'=>'first']);
-        $this->loadCss("style.css",['position'=>'after:dist/css/bootstrap.min.css']);
+		//$this->loadCss("https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/slate/bootstrap.min.css",['location' => 'external', 'position'=>'first']);
+        $this->loadCss("style.min.css",['position'=>'after:dist/css/bootstrap.min.css']);
         //$this->loadCss("jquery.mCustomScrollbar.css",['position'=>'after:dist/css/style.css']);
     }
 

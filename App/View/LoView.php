@@ -5,6 +5,10 @@
 //
 use App\Vendor\Stringly;
 ?>
+<div class="alert alert-info" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Ces informations ne sont pas réelles et ne sont là qu'à titre indictif !
+</div>
 <h1>Utilisateurs</h1>
 <!--<ul>
 <?php /*foreach ($groups as $group): */?>

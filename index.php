@@ -33,13 +33,12 @@ $app->group('/users', function () use ($app) {
 });
 
 $app->group('/groups', function () use ($app) {
-
     $app->get('/', 'App\Controller\GroupsController:index')->name('groups_index');
 
 });
-/*$app->error(function (\Exception $e) use ($app) {
+$app->error(function (\Exception $e) use ($app) {
     $app->render('error.php');
-});*/
+});
 //$app->notFound(function () use ($app) {
 //    $app->render('404.html');
 //});
